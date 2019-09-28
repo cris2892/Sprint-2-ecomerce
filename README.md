@@ -1,2 +1,2 @@
-# Sprint-2-ecomerce
-Repositorio para el segundo sprint
+# Vegan-Network
+Este es el repositorio para el proyecto
