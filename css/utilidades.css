@@ -33,6 +33,12 @@ ul li {
   background-color: #37474f;
 }
 
+.imagen_Carrusel{
+    width: 800px;
+    height: 600px;
+    opacity: 0.55;
+}
+
 /* ----------------------------------------------
 	 Tipografia
 ----------------------------------------------- */

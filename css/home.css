@@ -82,25 +82,30 @@ a.text-hover-dark:focus, a.text-hover-dark:hover {
 ----------------------------------------------- */
 
 
-@media (min-width: 768px){
-.producto:hover .product-swap-image-front {
+/* @media (min-width: 768px){
+.producto:hover .product-image-front {
     opacity: 0;
 }
 
-}
+} */
 
-.product-swap-image {
+ .product-image {
     position: relative;
 }
 
-.product-swap-image .product-swap-image-front {
+.product-image .product-image-front {
     position: relative;
     cursor: pointer;
     transition: opacity .5s ease-in-out;
     z-index: 10;
 }
 
-.product-swap-image img {
+.producto  .link_Home:hover{
+color: rgb(64, 223, 24);
+    
+}
+
+.product-image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,7 +121,7 @@ img {
     border-style: none;
 }
 
-.product-swap-image img {
+.product-image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -134,6 +139,17 @@ img {
 
 .position-relative {
     position: relative !important;
+} 
+
+.carrusel_container  h5{
+   background-color: rgba(0, 0, 0, 0.311);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.carrusel_container  p{
+   background-color: rgba(0, 0, 0, 0.311); 
+   color: rgb(255, 255, 255);
+    font-weight: 500;
 }
 
 

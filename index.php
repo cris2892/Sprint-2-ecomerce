@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="es">
+    
 
 <head>
+    
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +19,7 @@
 
 
     <!-- Estilos Propios -->
-
+    
     <link rel="stylesheet" href="css/master.css">
 
     <title>E-Comerce</title>
@@ -24,40 +27,59 @@
 
 <body>
 
-    <div class="container_fluid">
+    <div class="container_fluid"><!-- Container1 -->
 
-        <div class="container_fluid">
-        <?php require_once("navbar.php"); ?>
+        <div class="container_fluid"><!-- Container2 -->
+            <?php require_once("navbar.php"); ?>
 
 
 
-            <div class="container_fluid">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
+            <div class="container_fluid carrusel_container"><!-- Carrusel -->
+                 <div class="bd-example">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <a href=""> <img src="img/main_banner1.jpg" class="d-block w-100" alt="..."></a>
+                            <img src="img/carrusel1.jpg" class="d-block w-100 imagen_Carrusel" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <a href=""> <img src="img/main_banner1.jpg" class="d-block w-100" alt="..."></a>
+                            <img src="img/100organic.jpg" class="d-block w-100 imagen_Carrusel" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <a href=""> <img src="img/main_banner1.jpg" class="d-block w-100" alt="..."></a>
+                            <img src="img/Comida2.jpg" class="d-block w-100 imagen_Carrusel" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
                         </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </div><!-- Carrusel -->
 
 
-            <div class="container container_productos_menu">
-                <div class="row justify-content-between align-items-center mb-4">
+            <div class="container container_productos_menu"><!-- Menu1 -->
+                <div class="row justify-content-between align-items-center mb-4"> <!-- Menu -->
                     <div class="col-12 col-sm">
                       <ul class="list-inline text-center text-sm-left mb-3 mb-sm-0">
                         <li class="list-inline-item"><a href="#" class="text-dark">Todo los Productos </a></li>
@@ -70,34 +92,33 @@
                     <div class="col-12 col-sm-auto text-center"><a href="#" class="btn btn-link px-0">Todo los Productos</a></div>
                   </div>
 
-                  <div class="row">
+                        <div class="row">
 
-                    <!-- Productos -->
+                             <!-- Productos -->
 
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-6">
-                        <div class="producto">
-                          <div class="product-image mb-md-3">
-                            <div class="product-badge badge badge-secondary">Nuevo</div><a href="detail-1.html">
-                              <div class="product-swap-image"><img src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0987188250_1_1_1.43f81a4a.jpg" alt="product" class="img-fluid product-swap-image-front"><img src="https://d19m59y37dris4.cloudfront.net/varkala/1-0/img/product/0987188250_2_1_1.7bbd2efc.jpg" alt="product" class="img-fluid"></div></a>
-                            </div>
-                          </div>
-                          <div class="position-relative">
-                            <h3 class="text-base mb-1"><a href="detail-1.html" class="text-dark">White Tee</a></h3><span class="text-gray-500 text-sm">$40.00</span>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                                <div class="producto">
+                                    <div class="product-image mb-md-3">
+                                        <div class="product-badge badge badge-secondary">Nuevo</div><a class="link_Home" href="detail-1.html">
+                                            <div class="product-image">
+                                                <img src="img/caja-vegana.png" alt="product" class="img-fluid product-image-front">
+                                            </div>
+                                            <div class="position-relative">
+                                                <h3 class="text-base mb-1">White Tee</h3><span class="text-gray-500 text-sm">$40.00</span></a>
+                                            </div>
+                                    </div>                                       
+                                </div>
+                            </div> <!-- Productos -->
+                            
 
-                          </div>
-                        </div> <!-- Productos -->
-
-
-
-                      </div>
-
-                  </div>
-            </div>
-
+                        </div> <!-- row -->
+                </div><!-- menu -->
+            </div><!-- Menu1 -->
 
 
-        </div>
-    </div>
+
+        </div><!-- Container2 -->
+    </div><!-- Container1 -->
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -64,7 +64,7 @@
             <!--Logo-->
             <div class="logo col-12 col-sm-8 d-sm-flex justify-content-end">
                 <a href="Index.php" class="logo-link">                    
-                    <img src="img/Logo Tienda2.png" alt=""> 
+                    <img src="img/Logo_Green1.png" alt=""> 
                     <!-- #FBF27C -->
                 </a>
             </div>
