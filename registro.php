@@ -1,17 +1,16 @@
 <?php
-  //Esto debo hacerlo, para lograr que este programa logré visualizar las funciones creadas y de esa forma poder usarlas cuando desee.
   require_once("controladores/funciones.php");
   require_once("helpers.php");
   
- 
-  
-  
   if($_POST){
-    $errores = validar($_POST); 
+    
+    $errores = validar($_POST,$_FILES); 
    if(count($errores)==0){     
-     $registro = armarRegistro($_POST);
+    $avatar = armarAvatar($_FILES); 
+    $registro = armarRegistro($_POST,$avatar);
      guardarRegistro($registro);
-     //De n o excistir errores en la información tipeada por el usuario entonces lo redirecciono a donde yo desee.
+     
+     //Una vez registrado lo mando a la pantalla de login
      header("location:login.php");
    }
   }
@@ -61,7 +60,7 @@
             </div>
 
             <div class="  p-3 col-12 col-sm-12 col-md-8 col-lg-4 align-center">
-              <form class="" action="" method="post">
+              <form class="" action="" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <label for="inputNombre">Nombre</label>
@@ -92,6 +91,11 @@
                   <label for="inputPasswordRepeat">Repita Contraseña</label>
                   <input type="password" name="passwordRepeat" value= "<?=isset($errores['passwordRepeat'])? "":old('passwordRepeat') ;?>" class="form-control" id="inputPasswordRepeat" placeholder="Repita la Contraseña">
                 </div>
+
+                <div class="form-group">
+                  <label for="avatar">Avatar</label>
+                  <input  name="avatar" type="file" value= "" class="form-control" id="avatar" >
+                </div>          
 
                 <button type="submit" class="btn btn-primary botonRegistro" id="botonRegistro" >Registrarse</button>
                 <a href="login.php">Ya tengo usuario</a>

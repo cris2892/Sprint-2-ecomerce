@@ -1,3 +1,32 @@
+<?php
+  require_once('controladores/funciones.php');
+  require_once('helpers.php');
+
+  if($_POST){
+    $errores = validarLogin($_POST);
+    if(count($errores)==0){
+      $usuario = buscarPorEmail($_POST['email']);
+      if($usuario==null){
+        $errores['email']="Usuario no encontrado";
+      }else{
+        if(password_verify($_POST['password'],$usuario['password'])===false){
+          $errores['password']="Datos inválidos...";
+        }else{
+          seteoUsuario($usuario,$_POST);
+          if(validarUsuario()){            
+            header('location:perfil.php');
+            exit;
+          }else{
+            header('location:login.php');
+            exit;
+          }
+        }
+      }
+    }
+  }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,22 +54,30 @@
         </div>
 
         <div class="  p-3 col-12 col-sm-12 col-md-8 col-lg-4 align-center">
-          <form class="" action="" method="post">
-            <div class="form-group">
-              <label for="inputUsuario">Usuario Red Vegana</label>
-              <input type="text" name= "usuario" class="form-control" id="inputUsuario" placeholder="Ingrese su nombre de Usuario">
-            </div>
-            <div class="form-group">
-              <label for="inputPassword">Contraseña</label>
-              <input type="password" name ="password" class="form-control" id="inputPassword" placeholder="Ingrese una Contraseña">
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="checkRecordarme">
-              <label class="form-check-label" for="checkRecordarme">Recordarme y permanecer conectado</label>
-            </div>
-            <button type="submit" class="btn btn-primary" id="botonRegistro">Submit</button>
-            <a href="registro.php">Crear Usuario</a>
-          </form>
+            <?php if(isset($errores)):?>
+              <ul class="alert alert-danger">
+                <?php foreach ($errores as $value) :?>
+                    <li><?=$value;?></li>
+                <?php endforeach;?>
+              </ul>
+            <?php endif;?> 
+            <form class="" action="" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="text" name= "email" class="form-control" id="inputEmailLogin" placeholder="Ingrese su e-mail">
+              </div>
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name ="password" class="form-control" id="inputPasswordLogin" placeholder="Ingrese su Contraseña">
+              </div>
+              <div class="form-group form-check">
+                  <input  class="text-left" name="recordarme" type="checkbox" value= "recordarme" class="form-control " id="recordarme" >
+                  <label for="recordarme">Recordarme y permanecer conectado</label>
+                
+              </div>
+              <button type="submit" class="btn btn-primary" id="botonRegistro">Submit</button>
+              <a href="registro.php">Crear Usuario</a>
+            </form>
         </div>
 
 
