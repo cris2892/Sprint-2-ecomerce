@@ -1,3 +1,22 @@
+<?php
+  //Esto debo hacerlo, para lograr que este programa logré visualizar las funciones creadas y de esa forma poder
+  // usarlas cuando desee.
+  require_once("controladores/funciones.php");
+  require_once("helpers.php");
+  
+ 
+  
+  
+  if($_POST){
+    $errores = validar($_POST); 
+   if(count($errores)==0){     
+     $registro = armarRegistro($_POST);
+     guardarRegistro($registro);
+     //De no existir errores en la información tipeada por el usuario entonces lo redirecciono a donde yo desee.
+     header("location:perfil.php");
+   }
+  }
+?>
 <!doctype html>
 <html lang="es">
 
@@ -18,7 +37,8 @@
     <!-- Estilos Propios -->
 
   
-    <link rel="stylesheet" href="css/editar-informacion-cuenta.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
 
     <title>Mi Cuenta</title>
 </head>
@@ -34,25 +54,25 @@
 
 
             <!--Menu lateral izquierdo-->
-            <section class="cuerpo-perfil">
-                <section class="contenedor-lateral">
-                    <article class="titulo-bienvenida">
+            <div class=" row cuerpo-perfil">
+                <div class="contenedor-lateral d-none d-md-block  p-3 col-12  col-sm-0 col-md-3 col-lg-3 align-center">
+                    <div class="titulo-bienvenida">
                         <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola Florencia!!</p> 
-                    </article> 
-                    <article class="usuario-compra-vende">
+                    </div> 
+                    <div class="usuario-compra-vende">
                         <p>Soy Comprador</p> 
-                    </article><br> 
-                    <article>
-                        <ul>
+                    </div><br> 
+                    <div>
+                        <ul class="lista-cuenta">
                             <li><a href="perfil.php">Mi cuenta</a></li>
                             <li><a href="compras.php">Mis compras</a></li>
                             <li><a href="preguntas.php">Mis preguntas</a></li>
                             <li><a href="favoritos.php">Favoritos</a></li>
                         </ul>
-                    </article>
-                </section>
-                <section class="contenedor-central">
-                    <article>
+                    </div>
+                </div>
+                <div class="contenedor-central p-3 col-12 col-sm-12 col-md-9 col-lg-9 align-center">
+                    <div>
                         <h2 >Mi cuenta</h2>
                         <br>
                             <div class="contenedor-informacion">
@@ -65,11 +85,13 @@
                                 <form action="editar-informacion-cuenta.php" method="GET">
                                     <p>
                                         <label for="nombreUsuario"><img class="icono-cuenta" src="img/icon-usuario.png" alt="">Nombre de usuario:</label><br>
-                                        <input class="caja-editar-usuario" type="text" name="nombreUsuario"> 
+                                        <input class="caja-editar-usuario" type="text" name="nombreUsuario" value= "<?=isset($errores['usuario'])? "":old('usuario') ;?>" 
+                                        class="form-control" id="inputUsuario" placeholder="Ingrese su nombre de Usuario"> 
                                     </p>
                                     <p>
                                         <label for="email"><img class="icono-cuenta" src="img/icon-email.png" alt="">E-mail:</label><br>
-                                        <input class="caja-editar-usuario" type="email" name="email"><br>
+                                        <input class="caja-editar-usuario" type="email" name="email" value= "<?=isset($errores['email'])? "":old('email') ;?>"
+                                         class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Ingrese su email"><br>
                                     </p>
                                     <p>
                                         <label for="telefono"><img class="icono-cuenta" src="img/icon-telefono.png" alt="">Numero de telefono:</label><br>
@@ -87,12 +109,12 @@
                                                 <option value="pr">Portugues</option>
                                             </select>
                                     </p> <br>
-                                        <div><input class="btn1" type="button" value="Enviar"></div>
+                                        <div><input class="btn1" type="submit" value="Enviar"></div>
                                 </form>
                             </div><br>
-                     </article>
+                     </div>
                         
-                </section>
+                </div>
 
               
 

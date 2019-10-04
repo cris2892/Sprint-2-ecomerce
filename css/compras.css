@@ -1,4 +1,4 @@
-.cuerpo-perfil {
+.cuerpo-perfil-compras {
     display: flex;
     justify-content: center;
     height: 71rem;
@@ -7,86 +7,94 @@
     padding-left: 5rem;
     box-sizing: border-box;
 }
-.contenedor-lateral{
+.contenedor-lateral-compras{
      color:#B7950B;
     width: 300px;
     padding-left: 2rem;
     border-right: solid gray 0.1rem;
 }
-.titulo-bienvenida{
+.titulo-bienvenida-compras{
     font-size: 2rem; 
 }
-.imagen-perfil{
+.imagen-perfil-compras{
     padding-right: 1rem;
 }
-.usuario-compra-vende{
+.usuario-compra-vende-compras{
     font-size: 1.2rem;
     color: #9E9E9E;
     padding-left: 4.3rem;
 }
-.contenedor-central{
+.contenedor-central-compras{
     width: 100%;
     padding-left: 10rem;
     padding-right: 5rem;
 }
-.titulo-contenedor{
+.titulo-contenedor-compras{
     
     width: 95%;
 }
 
-.linea{
+.linea-compras{
     border-bottom: solid gray 0.1rem;
     display: flex;
 }
-.producto-compra{
+.producto-compra-compras{
     display: flex;
     border-bottom: solid #CCD1D1  0.1rem;
     padding-bottom: 0.8rem;
     
 }
-.contenedor-imagen{
+.contenedor-imagen-compras{
     width: 200px;
     height: 120px;
 }
-.imagen-producto-compra{
+.imagen-producto-compra-compras{
     
     height: 80%;
 }
-.foto-tienda{
+.foto-tienda-compras{
     padding-right: 1rem;
 }
 
-.despcripcion-producto{
+.despcripcion-producto-compras{
     width: 40%;
     padding-left: 1rem;
 }
-.vendedor-producto{
+.vendedor-producto-compras{
     width: 40%;
 }
-.detalle-producto{
-    width:;
-}
-.producto-compra-2{
+.producto-compra-2-compras{
     display: flex;
     border-bottom: solid #CCD1D1  0.1rem;
     padding-bottom: 0.8rem;
     padding-top: 2rem;
 }
-.paginacion{
+.paginacion-compras{
     padding-top: 5rem;
     display: flex;
     justify-content: center;
     
 }
-.pagina-numero{
+.pagina-numero-compras{
     padding-right: 1rem;
 }
-.btn1:hover {
-    background-color: #fa4251;
+.btn1-compras:hover {
+    background-color: red;
     color: white;
     
 }
-.btn1 {
+.btn1-compras {
     background-color: #585556;
     color: white;   
 }
+@media (max-width: 575.98px) {
+    .foto-tienda-compras{
+        display: none;
+    } 
+    .vendedor-producto-compras{
+        display: none;
+    }
+    .precio-producto-compras{
+        font-size: 1.5rem;
+    }
+ }

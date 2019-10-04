@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -34,38 +35,41 @@
 
 
         <!--Menu lateral izquierdo-->
-            <section class="cuerpo-perfil">
-                <section class="contenedor-lateral">
+            <div class="row cuerpo-perfil"  >
+            <div class="  contenedor-lateral d-none d-md-block  p-3 col-12  col-sm-0 col-md-3 col-lg-3 align-center"  >
 
-                    <article class="titulo-bienvenida">
-                        <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola Florencia!!</p> 
-                    </article> 
-                    <article class="usuario-compra-vende">Soy Comprador</article>
+                    <div class="titulo-bienvenida">
+                        <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola #Nombre</p> 
+                    </div> 
+                    <div class="usuario-compra-vende">Soy Comprador</div>
                     <br> 
-                    <article>
-                            <ul>
+                    <div>
+                            <ul class="lista-cuenta">
                                     <li><a href="perfil.php">Mi cuenta</a></li>
                                     <li><a href="compras.php">Mis compras</a></li>
                                     <li><a href="preguntas.php">Mis preguntas</a></li>
                                     <li><a href="favoritos.php">Favoritos</a></li>
                                 </ul>
-                    </article>
-                </section>
-                <section class="contenedor-central">
-                    <article>
-                            <h2 >Mi cuenta</h2>
+                    </div>
+                        </div>
+                <div class=" contenedor-central p-3 col-12 col-sm-12 col-md-9 col-lg-9 align-center">
+                    <div  >
+                        <div  >
+                        <h2  >Mi cuenta</h2>
+                        </div>
+                            
                             <br>
-                            <div class="contenedor-informacion">
+                            <div  class=" contenedor-informacion">
                                     <div class="linea">
                                             <h4 class="titulo-contenedor">Informacion personal</h4> <a class="editar" href="editar-informacion-cuenta.php">Editar</a>
                                     </div>
                                      <br>
                                      <div class="contenido-contenedor">
-                                            <p class="informacion-mi-cuenta"></p> <img class="icono-cuenta" src="img/icon-usuario.png" alt="">Nala Parrillas</p>
-                                            <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-email.png" alt="">nala@gmail.com</p>
+                                            <p class="informacion-mi-cuenta"></p> <img class="icono-cuenta" src="img/icon-usuario.png" alt="">Nombre Apellido</p>
+                                            <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-email.png" alt="">email@gmail.com</p>
                                             <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-telefono.png" alt=""> 4765-6541</p>
                                             <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-ciudad.png" alt="">Calle 123 - Buenos Aires - Argentina</p>
-                                            <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-pais.png" alt="">Español</p>
+                                            <p class="informacion-mi-cuenta"> <img class="icono-cuenta" src="img/icon-idioma.png" alt="">Español</p>
                                      </div>
                             </div>
                                     <br>
@@ -78,22 +82,9 @@
                                             <p class="contrasenia-contenedor">***********</p>
                                     </div>
                                     </div>
-                            
-         
-                          
-                           
-                    </article>
+                            </div>
                         
-                </section>
-
-              
-
-                 
-           
-           
-
-          
-
+                </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

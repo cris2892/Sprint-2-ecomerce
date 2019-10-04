@@ -24,16 +24,14 @@
     color: #9E9E9E;
     padding-left: 4.3rem;
 }
-.contenedor-central{
+.contenedor-central-compras{
     width: 100%;
     padding-left: 10rem;
     padding-right: 5rem;
 }
 .titulo-contenedor{
-    
     width: 95%;
 }
-
 .linea{
     border-bottom: solid gray 0.1rem;
     display: flex;
@@ -42,8 +40,7 @@
 .producto-compra{
     display: flex;
     border-bottom: solid #CCD1D1  0.1rem;
-    padding-bottom: 0.1rem;
-    
+    padding-bottom: 0.1rem;   
 }
 .precio-producto{
     font-size: 3rem;
@@ -68,7 +65,7 @@
     width: 40%;
     padding-left: 1rem;
 }
-.vendedor-producto{
+.vendedor-producto-compras{
     width: 40%;
 }
 .detalle-producto{
@@ -89,22 +86,22 @@
 .pagina-numero{
     padding-right: 1rem;
 }
-.boton-comprar-favoritos{
+.boton-favoritos{
     padding-bottom: 1rem;
 }
 .selecion-eliminar{
     padding-top: 2rem;
 }
-.boton-eliminar{
+.btn-eliminar{
     background: transparent;
 }
-.boton-eliminar:hover{
-    background-color: #fa4251;
+.btn-eliminar:hover{
+    background-color: #B7950B;
     color: white; 
 }
 
 .btn1:hover {
-    background-color: #fa4251;
+    background-color: #B7950B;
     color: white;
     
 }

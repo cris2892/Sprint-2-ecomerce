@@ -47,3 +47,18 @@
 .contrasenia-contenedor{
     color:  #37474f;  
 }
+ @media (max-width: 575.98px) { 
+    .imagen-perfil{
+        display: none;
+    }
+   .usuario-compra-vende{
+        padding-left: 0;
+    }
+    .lista-cuenta{
+        padding-left: 0;
+    }
+    .contenedor-central{
+        padding-left: 1rem;
+    }
+ }
+ 

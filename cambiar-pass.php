@@ -1,3 +1,21 @@
+<?php
+  //Esto debo hacerlo, para lograr que este programa logré visualizar las funciones creadas y de esa forma poder usarlas cuando desee.
+  require_once("controladores/funciones.php");
+  require_once("helpers.php");
+  
+ 
+  
+  
+  if($_POST){
+    $errores = validar($_POST); 
+   if(count($errores)==0){     
+     $registro = armarRegistro($_POST);
+     guardarRegistro($registro);
+     //De n o excistir errores en la información tipeada por el usuario entonces lo redirecciono a donde yo desee.
+     header("location:perfil.php");
+   }
+  }
+?>
 <!doctype html>
 <html lang="es">
 
@@ -17,10 +35,9 @@
 
     <!-- Estilos Propios -->
 
-    <link rel="stylesheet" href="master/.css">
-    <link rel="stylesheet" href="css/editar-informacion-cuenta.css">
-
-    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+     <title>Mi Cuenta</title>
 </head>
 
 <body>
@@ -31,26 +48,27 @@
             <?php require_once("navbar.php"); ?>
 
             <!--Menu lateral izquierdo-->
-                 <section class="cuerpo-perfil">
-                    <section class="contenedor-lateral">
-                        <article class="titulo-bienvenida">
+            <div class="row cuerpo-perfil" >
+                    <div class="contenedor-lateral  d-none d-md-block  p-3 col-12  col-sm-0 col-md-3 col-lg-3 align-center" >
+                        <div class="titulo-bienvenida   ">
                             <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola Florencia!!</p> 
-                        </article> 
-                        <article class="usuario-compra-vende"> 
+                        </div> 
+                        <div class="usuario-compra-vende"> 
                             <p>Soy Comprador</p>
-                        </article>
+                        </div>
                         <br> 
-                        <article>
+                        <div>
                             <ul>
-                                <li><a href="perfil.html">Mi cuenta</a></li>
-                                <li><a href="compras.html">Mis compras</a></li>
-                                <li><a href="preguntas.html">Mis preguntas</a></li>
-                                <li><a href="favoritos.html">Favoritos</a></li>
+                                <li><a href="perfil.php">Mi cuenta</a></li>
+                                <li><a href="compras.php">Mis compras</a></li>
+                                <li><a href="preguntas.php">Mis preguntas</a></li>
+                                <li><a href="favoritos.php">Favoritos</a></li>
                             </ul>
-                        </article>
-                     </section>
-                <section class="contenedor-central">
-                    <article>
+                        </div>
+                     </div>
+                      <!--Contenedor cambio de contraseña-->
+                <div class="contenedor-central  p-3 col-12 col-sm-12 col-md-9 col-lg-9 align-center ">
+                    <div>
                         <h2 >Mi cuenta</h2>
                         <br>
                         <div class="contenedor-informacion">
@@ -60,15 +78,24 @@
                         </div>
                                      
                               
-                        <form action="editar-informacion-cuenta.html" method="post"> <br>
-                            <label for="password"><img class="icono-cuenta" src="img/icon-pass.png" alt="">Contraseña:</label><br>
-                            <input class="caja-editar-usuario" type="password" name="password"> <br><br>
-                            <div><input class="btn1" type="button" value="Enviar"></div>
-                        </form>
-                        <br>
-                    </article>
+                        <form action="perfil.php" method="post"> <br>
+                            <label for="password"><img class="icono-cuenta" src="img/icon-pass.png" alt="">Contraseña actual:</label><br>
+                            <input class="caja-editar-usuario" type="password" name ="password" > <br><br>
+                            
                         
-                </section>
+                        
+                            <label for="password"><img class="icono-cuenta" src="img/icon-pass.png" alt="">Contraseña nueva:</label><br>
+                            <input class="caja-editar-usuario" type="password" name="password" value= "<?=isset($errores['password'])? "":old('password') ;?>" class="form-control" id="inputPassword" placeholder="Ingrese una Contraseña"> <br><br>
+                         
+                      
+                        
+                            <label for="password"><img class="icono-cuenta" src="img/icon-pass.png" alt="">Repita contraseña nueva:</label><br>
+                            <input class="caja-editar-usuario" type="password" name="passwordRepeat" value= "<?=isset($errores['passwordRepeat'])? "":old('passwordRepeat') ;?>" class="form-control" id="inputPasswordRepeat" placeholder="Repita la Contraseña"> <br><br>
+                            <div><input class="btn1" type="submit" value="Enviar"></div>
+                        </form>
+                    </div>
+                        
+                </div>
 
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

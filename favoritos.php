@@ -34,59 +34,59 @@
 
 
             <!--Menu lateral izquierdo-->
-            <section class="cuerpo-perfil">
-                <section class="contenedor-lateral">
-
-                    <article class="titulo-bienvenida">
+            <div class=" row cuerpo-perfil">
+            <div>
+            </div>
+                <div class="contenedor-lateral d-none d-md-block  p-3 col-12  col-sm-0 col-md-3 col-lg-3 align-center">
+                    <div class="titulo-bienvenida">
                         <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola Florencia!!</p> 
-                    </article> 
-                    <article class="usuario-compra-vende">Soy Comprador</article>
+                    </div> 
+                    <div class="usuario-compra-vende">Soy Comprador</div>
                     <br> 
-                    <article>
-                            <ul>
-                                    <li><a href="perfil.html">Mi cuenta</a></li>
-                                    <li><a href="compras.html">Mis compras</a></li>
-                                    <li><a href="preguntas.html">Mis preguntas</a></li>
-                                    <li><a href="favoritos.html">Favoritos</a></li>
-                                </ul>
-                    </article>
-                </section>
+                    <div>
+                        <ul class="lista-cuenta">
+                            <li><a href="perfil.php">Mi cuenta</a></li>
+                            <li><a href="compras.php">Mis compras</a></li>
+                            <li><a href="preguntas.php">Mis preguntas</a></li>
+                            <li><a href="favoritos.php">Favoritos</a></li>
+                        </ul>
+                    </div>
+                </div>
 
                                  
             
 
 
-                <section class="contenedor-central">
-                        <article>
+                <div class="contenedor-central-compras  p-3 col-12 col-sm-12 col-md-9 col-lg-9 align-center">
+                        <div>
                                 <h2 >Favoritos</h2>
                                 <br><br>
                                 <!--Favorito 1-->
-                                <div class="producto-compra">
-                                    <div> <br><input type="checkbox" name="eliminar" id=""></div>
-                                    <div class="contenedor-imagen">
-                                        <img class="imagen-producto-compra"  src="img/burger.png" alt="">
+                                <div class="producto-compra-2">
+                                        <div><br><input type="checkbox" name="eliminar" id=""></div>
+                                        <div class="contenedor-imagen">
+                                            <img class="imagen-producto-compra"  src="img/burger.png" alt="">
+                                        </div>
+                                            
+                                        <div class="despcripcion-producto">
+                                                <a href="jugo-fruta.html"> Burger Veggie</a> <br><br>
+                                                <p class="precio-producto-compras">$200.-</p>
+                                        </div>
+                                        <div class="foto-tienda-compras">
+                                               <img src="img/cat1.png" alt=""> 
+                                        </div>
+    
+                                        <div class="vendedor-producto-compras">
+                                            <h5> Vendedor:</h5> 
+                                            <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
+                                            <a href="mensajes.html"> Ver mensajes</a>
+                                        </div>
+                                        <div class="detalle-producto"> 
+                                                <div><input class="btn1" type="button" value="Comprar"></div> <br>
+                                                <div><input class="btn1" type="button" value="Agregar al Carrito"></div>
+                                        </div>
+                                    
                                     </div>
-                                        
-                                    <div class="despcripcion-producto">
-                                            <a href="jugo-fruta.html"> Burger Veggie</a> <br><br>
-                                           <p class="precio-producto">$200.-</p>
-                                           <p class="envio-compra">Envio Gratis!</p>
-                                    </div>
-                                    <div class="foto-tienda">
-                                           <img src="img/cat1.png" alt=""> 
-                                    </div>
-
-                                    <div class="vendedor-producto">
-                                        <h5> Vendedor:</h5> 
-                                        <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
-                                        <a href="mensajes.html"> Ver mensajes</a>
-                                    </div>
-                                    <div class="detalle-producto"> 
-                                            <div><input class="btn1" type="button" value="Comprar"></div> <br>
-                                            <div><input class="btn1" type="button" value="Agregar al Carrito"></div>
-                                    </div>
-                                
-                                </div>
                               
 
                             <!--Favorito 2-->
@@ -98,14 +98,13 @@
                                             
                                         <div class="despcripcion-producto">
                                                 <a href="jugo-fruta.html"> Burger Veggie</a> <br><br>
-                                                <p class="precio-producto">$200.-</p>
-                                                <p class="envio-compra">Envio Gratis!</p>
+                                                <p class="precio-producto-compras">$200.-</p>
                                         </div>
-                                        <div class="foto-tienda">
+                                        <div class="foto-tienda-compras">
                                                <img src="img/cat1.png" alt=""> 
                                         </div>
     
-                                        <div class="vendedor-producto">
+                                        <div class="vendedor-producto-compras">
                                             <h5> Vendedor:</h5> 
                                             <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
                                             <a href="mensajes.html"> Ver mensajes</a>
@@ -117,46 +116,35 @@
                                     
                                     </div>
                                      <!--Favorito 3-->
-                                <div class="producto-compra-2">
+                                     <div class="producto-compra-2">
                                         <div><br><input type="checkbox" name="eliminar" id=""></div>
                                         <div class="contenedor-imagen">
-                                             <img class="imagen-producto-compra"  src="img/burger.png" alt="">
+                                            <img class="imagen-producto-compra"  src="img/burger.png" alt="">
                                         </div>
                                             
                                         <div class="despcripcion-producto">
                                                 <a href="jugo-fruta.html"> Burger Veggie</a> <br><br>
-                                                <p class="precio-producto">$200.-</p>
-                                           <p class="envio-compra">Envio Gratis!</p>
+                                                <p class="precio-producto-compras">$200.-</p>
+                                                
                                         </div>
-                                        <div class="foto-tienda">
+                                        <div class="foto-tienda-compras">
                                                <img src="img/cat1.png" alt=""> 
                                         </div>
     
-                                        <div class="vendedor-producto">
+                                        <div class="vendedor-producto-compras">
                                             <h5> Vendedor:</h5> 
                                             <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
                                             <a href="mensajes.html"> Ver mensajes</a>
                                         </div>
                                         <div class="detalle-producto"> 
-                                            <div><input class="btn1" type="button" value="Comprar"></div> <br>
-                                            <div><input class="btn1" type="button" value="Agregar al Carrito"></div>
-                                                
-                                                
+                                                <div><input class="btn1" type="button" value="Comprar"></div> <br>
+                                                <div><input class="btn1" type="button" value="Agregar al Carrito"></div>
                                         </div>
-                                    
-                                    </div>
-                                    <div class="selecion-eliminar">
-                                        <input  type="checkbox" name="eliminar" id="">   <input   class="boton-eliminar" type="button" value="Eliminar">
-                                    </div>
-                                    <div  class="paginacion">
-                                        <a class="pagina-numero" href="pagina-uno.html">1</a> 
-                                        <a class="pagina-numero" href="pagina-uno.html">2</a>
-                                        <a class="pagina-numero" href="pagina-uno.html">3</a>
-                                    </div>
-                        </article>
+                                       
                             
-                    </section>
-
+                    </div> <br>
+                    <div><input class="btn-eliminar" type="button" value="Eliminar"></div>
+                                    </div>
               
 
                  

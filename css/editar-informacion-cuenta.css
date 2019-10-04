@@ -12,6 +12,7 @@
     width: 300px;
     padding-left: 2rem;
     border-right: solid gray 0.1rem;
+    
 }
 .informacion-mi-cuenta{
     padding-top: 1rem;
@@ -28,6 +29,7 @@
     color: #9E9E9E;
     padding-left: 4.3rem;
 }
+
 .imagen-perfil{
     padding-right: 1rem;
 }
@@ -47,7 +49,7 @@
     padding-bottom: 2rem;
 }
 .btn1:hover {
-    background-color: #fa4251;
+    background-color: #B7950B;
     color: white;
     
 }
@@ -58,3 +60,17 @@
 .caja-editar-usuario{
     width: 30rem;
 }
+@media (max-width: 575.98px) { 
+    .imagen-perfil{
+        display: none;
+    }
+   .usuario-compra-vende{
+        padding-left: 0;
+    }
+    .lista-cuenta{
+        padding-left: 0;
+    }
+    .contenedor-central{
+        padding-left: 1rem;
+    }
+ }

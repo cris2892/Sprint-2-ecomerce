@@ -34,30 +34,30 @@
 
 
             <!--Menu lateral izquierdo-->
-            <section class="cuerpo-perfil">
-                <section class="contenedor-lateral">
+            <div class=" row cuerpo-perfil ">
+                <div class="contenedor-lateral d-none d-md-block  p-3 col-12  col-sm-0 col-md-3 col-lg-3 align-center">
 
-                    <article class="titulo-bienvenida">
+                    <div class="titulo-bienvenida">
                         <p> <img class="imagen-perfil" src="img/girl.png" alt="">Hola Florencia!!</p> 
-                    </article> 
-                    <article class="usuario-compra-vende">Soy Comprador</article>
+                    </div> 
+                    <div class="usuario-compra-vende">Soy Comprador</div>
                     <br> 
-                    <article>
+                    <div>
                         <ul>
-                            <li><a href="perfil.html">Mi cuenta</a></li>
-                            <li><a href="compras.html">Mis compras</a></li>
-                            <li><a href="preguntas.html">Mis preguntas</a></li>
-                            <li><a href="favoritos.html">Favoritos</a></li>
+                            <li><a href="perfil.php">Mi cuenta</a></li>
+                            <li><a href="compras.php">Mis compras</a></li>
+                            <li><a href="preguntas.php">Mis preguntas</a></li>
+                            <li><a href="favoritos.php">Favoritos</a></li>
                         </ul>
-                    </article>
-                </section>
+                    </div>
+                </div>
 
                                  
             
 
 
-                <section class="contenedor-central">
-                        <article>
+                <div class="contenedor-central p-3 col-12 col-sm-12 col-md-9 col-lg-9 align-center">
+                        <div>
                                 <h2 >Mis preguntas</h2>
                                 <br><br>
                                 <!--Pregunta 1-->
@@ -70,11 +70,11 @@
                                             <a href="jugo-fruta.html"> Jugo de Frutas Just</a> <br>
                                             $200.- .
                                     </div>
-                                    <div class="foto-tienda">
+                                    <div class="foto-tienda-compras">
                                            <img src="img/cat1.png" alt=""> 
                                     </div>
 
-                                    <div class="vendedor-producto">
+                                    <div class="vendedor-producto-compras">
                                         <h5> Vendedor:</h5> 
                                         <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
                                     </div>
@@ -95,11 +95,11 @@
                                                 <a href="jugo-fruta.html"> Jugo de Frutas Just</a> <br>
                                                 $200.- 
                                         </div>
-                                        <div class="foto-tienda">
+                                        <div class="foto-tienda-compras">
                                                <img src="img/cat1.png" alt=""> 
                                         </div>
     
-                                        <div class="vendedor-producto">
+                                        <div class="vendedor-producto-compras">
                                             <h5> Vendedor:</h5> 
                                             <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
                                         </div>
@@ -118,11 +118,11 @@
                                                 <a href="jugo-fruta.html"> Jugo de Frutas Just</a> <br>
                                                 $200.- 
                                         </div>
-                                        <div class="foto-tienda">
+                                        <div class="foto-tienda-compras">
                                                <img src="img/cat1.png" alt=""> 
                                         </div>
     
-                                        <div class="vendedor-producto">
+                                        <div class="vendedor-producto-compras">
                                             <h5> Vendedor:</h5> 
                                             <a href="tienda-nala.html"> ♥ Tienda Nala</a> <br>
                                         </div>
@@ -136,17 +136,8 @@
                                         <a class="pagina-numero" href="pagina-uno.html">2</a>
                                         <a class="pagina-numero" href="pagina-uno.html">3</a>
                                     </div>
-                        </article>
-                    </section>
-
-              
-
-                 
-           
-           
-
-          
-
+                        </div>
+                    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

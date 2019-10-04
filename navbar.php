@@ -11,33 +11,11 @@
 
             <div class="col-xs-12 col-sm-12">
                 <ul class="cabecera-arriba-dere text-right">
-
-                    <li class="cuenta text-center">
-                        <a href="index.php" class="text-center">Home</a>
-                    </li>
-
                     <li class="cuenta text-center">
                         <a href="faq.php" class="text-center">FAQ</a>
                     </li>
-
-                    <li class="cuenta text-center">
-                        <a href="favoritos.php" class="text-center">Favoritos</a>                        
-                    </li>
-
-                    <li class="cuenta text-center">
-                        <a href="compras.php" class="text-center">Compras</a>                        
-                    </li>
-
-                    <li class="cuenta text-center">
-                        <a href="preguntas.php" class="text-center">Preguntas</a>
-                    </li>
-
                     <li class="cuenta text-center">
                         <a href="contacto.php" class="text-center">Contacto</a>
-                    </li>
-
-                    <li class="cuenta text-center">
-                        <a href="perfil.php" class="text-center">Mi Cuenta</a>
                     </li>
 
                     <li class="cuenta text-center">
@@ -161,7 +139,18 @@
         <!-- Links -->
 
         <ul class="navbar-nav opciones mt-3 mt-lg-0">
-
+        <li class="cuenta  nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola #usuario</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="perfil.php">Mi cuenta</a>
+                        <a class="dropdown-item" href="compras.php">Mis compras</a>
+    
+                        <a class="dropdown-item" href="preguntas.php">Mis preguntas</a>
+                        <a class="dropdown-item" href="favoritos.php">Favoritos</a>
+                        <a class="dropdown-item" href="login.php">Cerrar sesion</a>
+                    </div>
+                    </li>
             <li class="nav-item activo">
                 <a class="nav-link" href="#">Home<span class="sr-only">(current)</span>
                 </a>

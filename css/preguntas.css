@@ -81,7 +81,7 @@
     padding-right: 1rem;
 }
 .btn1:hover {
-    background-color: #fa4251;
+    background-color: #B7950B;
     color: white;
     
 }
@@ -89,3 +89,11 @@
     background-color: #585556;
     color: white;   
 }
+@media (max-width: 575.98px) {
+    .foto-tienda-compras{
+        display: none;
+    } 
+    .vendedor-producto-compras{
+        display: none;
+    }
+ }
