@@ -24,13 +24,13 @@
     <title>Registro de nuevos usuarios</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
 
         <?php require_once("navbar.php"); ?>
 
         
         
-        
+        <div class="container">
         <div class="row">
             
             <div class="d-none d-md-block  p-3 col-12 col-sm-0 col-md-7 col-lg-7 align-center">
@@ -68,9 +68,11 @@
             </div>
           </div>
 
-          
+          </div>
 
 
+    
+    
     </div>
 
 
